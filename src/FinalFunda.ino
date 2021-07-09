@@ -48,7 +48,7 @@ void loop() {
   if(oled.pressedB()) ILOT = "T";
 
   // LIGHT response.
-  if(ILOT = "L"){
+  if(ILOT == "L"){
     vc.powerOnAmbient();
     
     // Check Light Status
@@ -73,7 +73,7 @@ void loop() {
 
     oled.println("LuxVal: " + vc.getAmbient())
   }
-  if(ILOT = "T"){
+  if(ILOT == "T"){
     digitalWrite(D6, LOW);
     digitalWrite(D5, LOW);
     digitalWrite(D4, LOW);
